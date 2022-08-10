@@ -1299,13 +1299,6 @@ h6 {
   border-radius: 20px;
 }
 
-.about-short a {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 135px;
-}
-
 /* Result */
 
 .result {
@@ -2864,6 +2857,13 @@ button.swiper-pagination-bullet {
 @media (max-width: 29.99875em) {
   .button {
     font-size: 0.875rem;
+  }
+
+  .about-short a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 135px;
   }
 
   .help__buttons {

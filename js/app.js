@@ -4487,12 +4487,9 @@
             initSliders();
         }));
         var lazyload_min = __webpack_require__(732);
-        const lazyMedia = new lazyload_min({
-            elements_selector: "[data-src],[data-srcset]",
-            class_loaded: "_lazy-loaded",
-            use_native: true
+        new lazyload_min({
+            elements_selector: "[data-src],[data-srcset]"
         });
-        lazyMedia.update();
         let addWindowScrollEvent = false;
         setTimeout((() => {
             if (addWindowScrollEvent) {
