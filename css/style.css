@@ -540,7 +540,9 @@ h6 {
 .button_gradient {
   color: #fff;
   position: relative;
-  background: #E72F29;
+  background-color: #E72F29;
+  border-radius: 8px;
+  padding: 14px 32px;
 }
 
 .button_gradient span {
@@ -994,6 +996,52 @@ h6 {
   gap: 20px;
 }
 
+.bread-crumbs {
+  margin-bottom: 1.75rem;
+}
+
+.bread-crumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.bread-crumbs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.bread-crumbs__item:first-of-type {
+  font-size: 1.125rem;
+}
+
+.bread-crumbs__item:last-of-type .bread-crumbs__link {
+  color: #2f2f2f;
+}
+
+.bread-crumbs__item:last-of-type::after {
+  display: none;
+}
+
+.bread-crumbs__item::after {
+  content: ">";
+  display: block;
+  color: #dbdbdb;
+}
+
+.bread-crumbs__link {
+  color: #bdbdbd;
+}
+
 /* Directions for help */
 
 @supports (margin-bottom: clamp( 1rem , 0.3333333333rem  +  1.3888888889vw , 2rem )) {
@@ -1345,6 +1393,175 @@ h6 {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.help {
+  margin-bottom: 7.5rem;
+}
+
+.help .children {
+  margin-bottom: 3.75rem;
+}
+
+.help__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+  margin-bottom: 2.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.help .caption,
+.help .description {
+  text-align: center;
+}
+
+.help .caption {
+  margin-bottom: 1rem;
+}
+
+.help .description {
+  max-width: 790px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.help__need {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.help__img img {
+  max-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.help__text {
+  padding: 32px;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+}
+
+.help__text_green {
+  background-color: #6f8c65;
+}
+
+.help__text_pink {
+  background-color: #9d5e68;
+}
+
+.help__text h2 {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 41px;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  margin-bottom: 0.5rem;
+}
+
+.help__item {
+  font-size: 1.5rem;
+  line-height: 36px;
+  position: relative;
+  padding-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.help__item::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  top: 14px;
+  left: 0;
+  border-radius: 50%;
+}
+
+.help .description:first-of-type {
+  margin-bottom: 3.125rem;
+}
+
+.caption {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.soldiers {
+  margin-bottom: 3.75rem;
+}
+
+.soldiers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 80px 170px;
+}
+
+.soldiers__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 650px;
+          flex: 0 1 650px;
+  gap: 12px 32px;
+}
+
+.soldiers__img {
+  max-width: 240px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #e1e5ed;
+}
+
+.soldiers__img img {
+  max-width: 240px;
+  width: 100%;
+  max-height: 240px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.soldiers .subtitle {
+  margin-bottom: 4px;
+}
+
+.soldiers time {
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  margin: 4px 0;
+}
+
+.soldiers__position {
+  margin-bottom: 0.25rem;
+}
+
+.soldiers__more {
+  max-width: 215px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /**
@@ -2164,6 +2381,25 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@media (min-width: 1500px) {
+  .soldiers__item:nth-child(4n+3) {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1500px) {
+  .soldiers__list {
+    gap: 24px 16px;
+  }
+
+  .soldiers__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 224px;
+        flex-basis: 224px;
+  }
+}
+
 @media (max-width: 64em) {
   .news {
     padding: 0 10px;
@@ -2474,6 +2710,52 @@ button.swiper-pagination-bullet {
     font-size: 1rem;
     line-height: 24px;
   }
+
+  .help .children {
+    margin-bottom: 1.5rem;
+  }
+
+  .help {
+    margin-bottom: 3.75rem;
+  }
+
+  .help__buttons {
+    margin-bottom: 1.25rem;
+  }
+
+  .help .description {
+    margin-bottom: 1rem;
+  }
+
+  .help__need {
+    margin-bottom: 1rem;
+  }
+
+  .help__text h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .help__text {
+    padding: 16px;
+  }
+
+  .help__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .help .description:first-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .caption {
+    margin-bottom: 1.25rem;
+  }
+
+  .soldiers .subtitle {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 21.875em) {
@@ -2568,6 +2850,46 @@ button.swiper-pagination-bullet {
 
   .result__item {
     max-width: 180px;
+  }
+}
+
+@media (max-width: 30.875em) {
+  .soldiers__item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .button {
+    font-size: 0.875rem;
+  }
+
+  .help__buttons {
+    gap: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .help .caption {
+    margin-bottom: 0.5rem;
+  }
+
+  .help__need {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .help__img img {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .help__text {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .caption {
+    margin-bottom: 1rem;
   }
 }
 
